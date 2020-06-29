@@ -1,0 +1,20 @@
+{
+    "name": "jay/posts-email-notification",
+    "description": "A plugin to send email notification to users when a new post is published",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Tanmay Kirtania",
+            "email": "jktanmay@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "JWP\\JPEN\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}
