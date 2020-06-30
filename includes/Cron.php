@@ -12,14 +12,15 @@ class Cron {
      *
      * @return void
      */
-    public function schedule() {         
-        add_action( 'jpen_cron', [ $this, 'init_cron' ] );
-        
-        register_deactivation_hook( JPEN_FILE, 'deactivate_cron' );
-         
+    public function schedule() {                 
+
         if ( ! wp_next_scheduled ( 'jpen_cron' ) ) {
-            wp_schedule_event( time(), 'daily', 'jpen_cron' );
+            wp_schedule_event( strtotime( "tomorrow" ) - 1, 'daily', 'jpen_cron' );
         } 
+
+        add_action( 'jpen_cron', [ $this, 'init_cron' ] );
+
+        register_deactivation_hook( JPEN_FILE, [ $this, 'deactivate_cron' ] );
     }
 
     /**
