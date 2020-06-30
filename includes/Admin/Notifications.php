@@ -166,6 +166,6 @@ class Notifications {
             $checked = 'checked';
         }
 
-        printf( "<input type='checkbox' name=%s id=%s value=%d %s />Exclude", $field_id, $field_id, 1, $checked );
+        printf( "<input type='checkbox' name=%s id=%s value=%d %s />%s", $field_id, $field_id, 1, $checked, __( 'Exclude', JPEN_DOMAIN ) );
     }
 }

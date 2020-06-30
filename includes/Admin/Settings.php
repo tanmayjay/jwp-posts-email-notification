@@ -77,9 +77,8 @@ class Settings {
      * @return void
      */
     public function server_info_section() {
-        ?>
-        <p>Information about SMTP server</p>
-        <?php
+        
+        ?><p><?php _e( 'Information about SMTP server', JPEN_DOMAIN ); ?></p><?php
 
         add_settings_field( 
             'jpen_smtp_host', 
@@ -149,9 +148,8 @@ class Settings {
      * @return void
      */
     public function sender_info_section() {
-        ?>
-        <p>Information about sender header</p>
-        <?php
+        
+        ?><p><?php _e( 'Information about sender header', JPEN_DOMAIN ); ?></p><?php
 
         add_settings_field( 
             'jpen_smtp_from', 
@@ -184,9 +182,8 @@ class Settings {
      * @return void
      */
     public function auth_section() {
-        ?>
-        <p>Information about SMTP user authentication</p>
-        <?php
+
+        ?><p><?php _e( 'Information about SMTP user authentication', JPEN_DOMAIN ); ?></p><?php
 
         add_settings_field( 
             'jpen_smtp_username', 
@@ -284,7 +281,7 @@ class Settings {
             $checked = 'checked';
         }
         
-        printf( "<input type='checkbox' name='%s' id='%s' value=%d %s>Enable", $field_id, $field_id, true, $checked );
+        printf( "<input type='checkbox' name='%s' id='%s' value=%d %s>%s", $field_id, $field_id, true, $checked, __( 'Enable', JPEN_DOMAIN ) );
     }
 
     /**
@@ -304,7 +301,7 @@ class Settings {
             $checked = 'checked';
         }
         
-        printf( "<input type='checkbox' name='%s' id='%s' value=%d %s>Enable", $field_id, $field_id, 1, $checked );
+        printf( "<input type='checkbox' name='%s' id='%s' value=%d %s>%s", $field_id, $field_id, 1, $checked, __( 'Enable', JPEN_DOMAIN ) );
     }
 
     /**

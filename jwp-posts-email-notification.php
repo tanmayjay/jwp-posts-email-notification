@@ -2,16 +2,16 @@
 
 /**
  * Plugin Name:       JWP Posts Email Notification
- * Plugin URI:        https://github.com/tanmayjay/jwp-posts-email-notification
+ * Plugin URI:        https://github.com/tanmayjay/wordpress/jwp-posts-email-notification
  * Description:       A plugin to notify users about each new post
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Tanmay Kirtania
  * Author URI:        https://linkedin.com/in/tanmay-kirtania
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       jwp-pen
+ * Text Domain:       jwp-posts-email-notification
  * 
  * 
  * Copyright (c) 2020 Tanmay Kirtania (jktanmay@gmail.com). All rights reserved.
@@ -41,7 +41,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 final class JWP_Posts_Email_Notification {
 
-    const version = '1.2.0';
+    const version = '1.2.1';
 
     //Private class constructor
     private function __construct() {
@@ -80,7 +80,7 @@ final class JWP_Posts_Email_Notification {
         define( 'JPEN_FILE', __FILE__ );
         define( 'JPEN_PATH', __DIR__ );
         define( 'JPEN_URL', plugins_url( '', JPEN_FILE ) );
-        define( 'JPEN_DOMAIN', 'jwp-pen' );
+        define( 'JPEN_DOMAIN', 'jwp-posts-email-notification' );
     }
 
     /**
@@ -102,6 +102,9 @@ final class JWP_Posts_Email_Notification {
      * @return void
      */
     public function init_plugin() {
+
+        load_plugin_textdomain( JPEN_DOMAIN, false, dirname( plugin_basename( __file__ ) ) . '/assets/languages' );
+
         new JWP\JPEN\Mailer();
         
         if ( is_admin() ) {
