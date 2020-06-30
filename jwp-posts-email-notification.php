@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name:       JWP Posts Email Notification
- * Plugin URI:        https://github.com/tanmayjay/wordpress/tree/master/3-Plugin-API/posts-email-notification
+ * Plugin URI:        https://github.com/tanmayjay/jwp-posts-email-notification
  * Description:       A plugin to notify users about each new post
- * Version:           1.1.1
+ * Version:           1.2.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            Tanmay Kirtania
@@ -41,7 +41,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 final class JWP_Posts_Email_Notification {
 
-    const version = '1.1.1';
+    const version = '1.2.0';
 
     //Private class constructor
     private function __construct() {
@@ -91,6 +91,9 @@ final class JWP_Posts_Email_Notification {
     public function activate() {
         $activator = new JWP\JPEN\Activator();
         $activator->run();
+        
+        $cron = new JWP\JPEN\Cron();
+        $cron->schedule();
     }
 
     /**

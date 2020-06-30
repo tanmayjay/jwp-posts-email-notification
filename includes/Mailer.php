@@ -19,7 +19,7 @@ class Mailer {
         if ( 'transition_post_status' == $this->hook ) {
             add_action( $this->hook, [ $this, 'transition_post_status_email' ], 10, 3 );
         } else if ( 'publish_post' == $this->hook ) {
-            add_action( $this->hook, [ $this, 'publish_post_email' ], 10, 2 );
+            add_action( 'publish_post', [ $this, 'publish_post_email' ], 10, 2 );
         }
     }
 
@@ -89,10 +89,10 @@ class Mailer {
         
         wp_mail( $mail_to, self::subject, $message );
     }
-
+    
     /**
      * Retrives the required recipients' emails
-     *
+     * 
      * @param object $post
      * 
      * @return array
