@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:       JWP Posts Email Notification
- * Plugin URI:        https://github.com/tanmayjay/wordpress/tree/master/3-Plugin-API/posts-email-notification
+ * Plugin URI:        https://github.com/tanmayjay/jwp-posts-email-notification
  * Description:       A plugin to notify users about each new post
  * Version:           1.2.1
  * Requires at least: 5.2
