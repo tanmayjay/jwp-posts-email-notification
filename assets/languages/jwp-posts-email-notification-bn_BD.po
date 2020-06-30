@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-06-30 21:19+0600\n"
+"PO-Revision-Date: 2020-06-30 21:19+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: includes\n"
+
+#: includes/Admin/Menu.php:30
+msgid "Posts Email Notifications"
+msgstr "পোস্ট ইমেইল প্রজ্ঞাপন"
+
+#: includes/Admin/Menu.php:31
+msgid "Email Notification"
+msgstr "ইমেইল প্রজ্ঞাপন"
+
+#: includes/Admin/Menu.php:40
+msgid "Posts Email Notification"
+msgstr "পোস্ট ইমেইল প্রজ্ঞাপন"
+
+#: includes/Admin/Menu.php:41
+msgid "Manage Notification"
+msgstr "প্রজ্ঞাপন পরিচালনা করুন"
+
+#: includes/Admin/Menu.php:49 includes/Admin/Menu.php:50
+msgid "SMTP Settings"
+msgstr "SMTP সেটিংস"
+
+#: includes/Admin/Menu.php:93
+msgid "Settings Saved"
+msgstr "সেটিংস সংরক্ষিত"
+
+#: includes/Admin/Menu.php:108
+msgid "Save Settings"
+msgstr "সেটিংস সংরক্ষণ করুন"
+
+#: includes/Admin/Notifications.php:48
+msgid "Notifications Settings"
+msgstr "প্রজ্ঞাপন সেটিংস"
+
+#: includes/Admin/Notifications.php:63
+msgid "Send Notifications To"
+msgstr "কাকে প্রজ্ঞাপন প্রেরণ করবেন"
+
+#: includes/Admin/Notifications.php:76
+msgid "Send Notifications For"
+msgstr "কখন প্রজ্ঞাপন প্রেরণ করবেন"
+
+#: includes/Admin/Notifications.php:83
+msgid "When a post is created or updated"
+msgstr "যখন একটি পোস্ট তৈরি বা হালনাগাদ করা হয়"
+
+#: includes/Admin/Notifications.php:84
+msgid "Only when a post is created"
+msgstr "শুধুমাত্র যখন একটি পোস্ট তৈরি করা হয়"
+
+#: includes/Admin/Notifications.php:92
+msgid "Exclude Post Creator"
+msgstr "পোস্টদাতাকে বাদ দিন"
+
+#: includes/Admin/Notifications.php:169
+msgid "Exclude"
+msgstr "বাদ দিন"
+
+#: includes/Admin/Settings.php:54
+msgid "SMTP Server Info"
+msgstr "SMTP সার্ভারের তথ্য"
+
+#: includes/Admin/Settings.php:61
+msgid "SMTP Sender Info"
+msgstr "SMTP সেন্ডারের তথ্য"
+
+#: includes/Admin/Settings.php:68
+msgid "SMTP User Authentication"
+msgstr "SMTP ব্যবহারকারী প্রমাণীকরণ"
+
+#: includes/Admin/Settings.php:81
+msgid "Information about SMTP server"
+msgstr "SMTP সার্ভারের বিস্তারিত তথ্যাবলি"
+
+#: includes/Admin/Settings.php:85
+msgid "SMTP Host"
+msgstr "SMTP হোস্ট"
+
+#: includes/Admin/Settings.php:97
+msgid "SMTP Port"
+msgstr "SMTP পোর্ট"
+
+#: includes/Admin/Settings.php:109
+msgid "SMTP Secure"
+msgstr "SMTP নিরাপদীকরণ"
+
+#: includes/Admin/Settings.php:122
+msgid "SMTP Auth"
+msgstr "SMTP প্রমাণীকরণ"
+
+#: includes/Admin/Settings.php:134
+msgid "SMTP Debug"
+msgstr "SMTP ডিবাগ"
+
+#: includes/Admin/Settings.php:152
+msgid "Information about sender header"
+msgstr "প্রেরণকারীর বিস্তারিত তথ্যাবলি"
+
+#: includes/Admin/Settings.php:156
+msgid "SMTP From"
+msgstr "SMTP প্রেরক"
+
+#: includes/Admin/Settings.php:168
+msgid "SMTP Name"
+msgstr "SMTP প্রেরকের নাম"
+
+#: includes/Admin/Settings.php:186
+msgid "Information about SMTP user authentication"
+msgstr "SMTP ব্যবহারকারী প্রমাণীকরনের তথ্যাবলি"
+
+#: includes/Admin/Settings.php:190
+msgid "SMTP Username"
+msgstr "SMTP ইউজারনেম"
+
+#: includes/Admin/Settings.php:202
+msgid "SMTP Password"
+msgstr "SMTP পাসওয়ার্ড"
+
+#: includes/Admin/Settings.php:284 includes/Admin/Settings.php:304
+msgid "Enable"
+msgstr "সক্ষম করুন"
