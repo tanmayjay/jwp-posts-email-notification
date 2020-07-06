@@ -43,12 +43,12 @@ class Cron {
         
         $curr_date = current_time( 'j-m-Y' );
         $posts     = jpen_get_daily_posts( $curr_date );
-        $tot_post  = sizeof( $posts );
+        $tot_posts = sizeof( $posts );
         
         ob_start();
         ?>
         <h5>Date: <?php echo $curr_date; ?></h5>
-        <h5>Total Posts: <?php echo sizeof( $posts ); ?></h5>
+        <h5>Total Posts: <?php echo $tot_posts; ?></h5>
         <hr>
         <?php foreach ( $posts as $post ) : ?>
             <p><a href="<?php echo get_permalink( $post ); ?>"><?php echo $post->post_title; ?></a></p>
