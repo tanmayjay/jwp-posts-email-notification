@@ -14,6 +14,8 @@ class Mailer {
      */
     function __construct() {
         add_action( 'phpmailer_init', [ $this, 'config_phpmailer' ] );
+        add_filter( 'get_recipients', [ $this, 'get_recipients' ], 10, 2 );
+
         $this->hook = get_option( 'jpen_notify_for', 'publish_post' );
         
         if ( 'transition_post_status' == $this->hook ) {
@@ -62,9 +64,8 @@ class Mailer {
             $blog    = get_option( 'blogname' );
             $author  = get_the_author_meta( 'display_name', $post->post_author );
             $message = "$author just published a new post on $blog. View here: " . get_permalink( $post );
-            
-            add_filter( 'get_recipients', [ $this, 'get_recipients' ] );
-            $mail_to = apply_filters( 'get_recipients', $post );
+            $mail_to = get_option( 'admin_email' );
+            $mail_to = apply_filters( 'get_recipients', (array) $mail_to, $post );
             
             wp_mail( $mail_to, self::subject, $message );
         }
@@ -83,9 +84,8 @@ class Mailer {
         $blog    = get_option( 'blogname' );
         $author  = get_the_author_meta( 'display_name', $post->post_author );
         $message = "$author just published a new post on $blog. View here: " . get_permalink( $ID );
-        
-        add_filter( 'get_recipients', [ $this, 'get_recipients' ] );
-        $mail_to = apply_filters( 'get_recipients', $post );
+        $mail_to = get_option( 'admin_email' );
+        $mail_to = apply_filters( 'get_recipients', (array) $mail_to, $post );
         
         wp_mail( $mail_to, self::subject, $message );
     }
@@ -93,16 +93,17 @@ class Mailer {
     /**
      * Retrives the required recipients' emails
      * 
+     * @param array $mail_to
      * @param object $post
      * 
      * @return array
      */
-    public function get_recipients( $post ) {
+    public function get_recipients( $mail_to, $post ) {
         $roles           = get_option( 'jpen_user_roles', [ 'administrator' ] );
         $args['role_in'] = $roles;
         $exclude_author  = get_option( 'jpen_exclude_post_creator', 0 );
 
-        if ( 1 == $exclude_author ) {
+        if ( $exclude_author ) {
             $args['exclude'] = $post->post_author;
         }
 
